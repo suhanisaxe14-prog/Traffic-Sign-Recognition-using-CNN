@@ -95,14 +95,6 @@ About 362K parameters. Optimizer: Adam (learning rate 0.001). Loss: sparse categ
 - Transfer learning (for example MobileNetV2) for comparison
 - Streamlit app: upload a sign photo and see the top-3 predictions
 
-## 9. How to run
-
-1. Open `DL_project.ipynb` in Google Colab (GPU recommended).
-2. Run all cells from top to bottom. The dataset downloads automatically through `kagglehub`.
-3. The first run loads and caches the images in about a minute; training takes roughly 15-25 minutes.
-
-**Requirements:** Python 3, TensorFlow/Keras 3, NumPy, pandas, scikit-learn, Matplotlib, Pillow, kagglehub.
-
 ## Author
 
 Suhani Saxena ([@suhanisaxe14-prog](https://github.com/suhanisaxe14-prog))
