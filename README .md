@@ -131,35 +131,6 @@ Accuracy on the held-out test set, per-class precision/recall/F1 (`classificatio
 
 ---
 
-## 🚀 How to run
-
-```bash
-git clone https://github.com/suhanisaxe14-prog/<your-repo-name>.git
-cd <your-repo-name>
-pip install keras tensorflow scikit-learn scikit-image numpy pandas matplotlib pillow tqdm joblib kagglehub
-jupyter notebook traffic_sign_recognition.ipynb
-```
-
-1. Run the cells top to bottom. The dataset is downloaded automatically through `kagglehub` (a Kaggle account/API access may be required).
-2. The first run extracts and caches the data (`gtsrb_data.npz`). Later runs load from the cache.
-3. **Part 1** is ANN and CNN. **Part 2** is HOG + SVM, plus the final three-way comparison.
-
-> Note: HOG feature extraction (about 6 min) and SVM tuning (about 30 min for the 3×3 grid) are the slowest parts on CPU.
-
-### Use the saved models
-```python
-import keras, numpy as np
-from PIL import Image
-
-model = keras.models.load_model("gtsrb_cnn.keras")
-img = np.array(Image.open("sign.png").convert("RGB").resize((32, 32)), dtype="float32") / 255.0
-probs = model.predict(img[None], verbose=0)[0]
-print(np.argmax(probs), probs.max())
-```
-The SVM bundle `traffic_sign_svm.joblib` holds the scaler, PCA, SVM and class names.
-
----
-
 ## 📁 Repository structure
 ```
 ├── traffic_sign_recognition.ipynb   # full notebook: EDA → ANN → CNN → HOG+SVM → comparison
@@ -180,9 +151,6 @@ The SVM bundle `traffic_sign_svm.joblib` holds the scaler, PCA, SVM and class na
 ---
 
 ## 👩‍💻 Author
-**Suhani Saxena (Tisha)**: B.Tech (AI & Data Science), Mahakal Institute of Technology, Ujjain (RGPV)
+**Suhani Saxena**: B.Tech (AI & Data Science)
 GitHub: [@suhanisaxe14-prog](https://github.com/suhanisaxe14-prog)
 
-## 🙏 Acknowledgements
-- J. Stallkamp, M. Schlipsing, J. Salmen, C. Igel, *"The German Traffic Sign Recognition Benchmark: A multi-class classification competition"*, IJCNN 2011.
-- Kaggle dataset mirror by `meowmeowmeowmeowmeow`.
