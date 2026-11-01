@@ -1,0 +1,11 @@
+numpy
+pandas
+matplotlib
+pillow
+tqdm
+joblib
+scikit-learn
+scikit-image
+tensorflow
+keras
+kagglehub
