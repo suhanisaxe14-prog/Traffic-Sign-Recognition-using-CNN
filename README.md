@@ -2,8 +2,6 @@
 
 **A deep-learning computer-vision project that recognises 43 types of German traffic signs and proves, with a fair three-way experiment, why a CNN is the right tool for the job.** 🚀
 
-![Model comparison](docs/model_comparison.png)
-
 ---
 
 ## 🎯 About the Project
@@ -149,11 +147,6 @@ About **362 K parameters**, less than half the ANN, yet far more accurate. Adam 
 | Dropout | Reduces overfitting in the dense layer |
 | EarlyStopping | Stops at the best epoch |
 
-
-**CNN training curves:**
-
-![CNN curves](docs/cnn_curves.png)
-
 ## 📈 Model Evaluation
 
 ### Overall comparison
@@ -172,8 +165,6 @@ About **362 K parameters**, less than half the ANN, yet far more accurate. Adam 
 ### CNN confusion matrix (test set)
 Almost everything sits on the diagonal. The off-diagonal cells show where it gets confused.
 
-![CNN confusion matrix](docs/cnn_confusion_matrix.png)
-
 **Visible confusion patterns**
 - **Pedestrians → Road work** (26 images): both are red-bordered warning triangles with small pictograms.
 - **Priority road → Yield** (28 images).
@@ -182,7 +173,6 @@ Almost everything sits on the diagonal. The off-diagonal cells show where it get
 
 ### CNN: weakest classes
 These are mostly **warning triangles with fine inner detail**, several with few training images.
-
 
 ### Use the saved CNN
 ```python
